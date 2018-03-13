@@ -1,0 +1,554 @@
+#faq-answercontent p{
+    width: 320px;
+    background: #ddd;
+    padding: 20px;
+    margin: 10px auto;
+    margin-left: 0px;
+    font-family:calibri;
+    font-size: inherit;
+    max-height: 20px;
+    overflow: hidden;
+}
+#faq-answercontent.open{
+    max-height: 500px;
+
+}
+
+.content-answer{
+    display: inline-block;
+}
+
+body{
+    font-family: arial;
+    margin: 0;
+    background: #520000;
+}
+
+a{
+    text-decoration: none;
+    color: yellow;
+
+}
+
+
+a:hover{
+    color: orange;
+}
+
+#icon-linkedin:hover {
+    color: #007bb6;
+}
+
+#icon-facebook:hover {
+    color: #3b5998;
+}
+
+#icon-twitter:hover {
+    color: #00aced;
+}
+#icon-instagram:hover {
+    color: #bc2a8d;
+}
+#icon-youtube:hover {
+    color: #bb0000;
+}
+#icon-googleplus:hover {
+    color: #dd4b39;
+}
+
+
+
+
+#wrapper{
+    width: 980px;
+    margin: 0 auto;
+    background: #fff;
+
+}
+
+#main-navigation{
+
+    background-color:darkslategray;
+    padding: 10px;
+
+}
+
+#main-navigation ul{
+    text-align: right;
+    list-style-type: none;
+    margin-right: 20px;
+    text-shadow:0px 1px 0px rgba(0,0,0,0.4);
+}
+
+#main-navigation li{
+    display: inline-block;
+    margin-left: 20px;
+}
+#main-navigation ul.sub-menu li{
+    width:160%;
+    padding:5px 0px;
+    position:absolute;
+    top:100%;
+    left:0px;
+    z-index:-1;
+    opacity:0;
+    transition:opacity linear 0.15s;
+    box-shadow:0px 2px 3px rgba(0,0,0,0.2);
+    background:#2e2728;
+
+}
+#main-navigation > ul > li:hover > a, #main-navigation > ul > .current> a {
+    background:#2e2728;
+}
+
+
+#main-navigation li:hover ul.sub-menu {
+    z-index:1;
+    opacity:1;
+}
+
+
+
+#main-navigation a{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 6px;
+}
+#main-navigation img.logo{
+    margin-right:280px;
+    margin-left: 30px;
+}
+#main-navigation a.current{
+    background: #8f746c;
+    border-radius: 4px;
+}
+
+#lead-banner img{
+    width: 100%;
+
+}
+
+#learn{
+    margin: 30px 0;
+    text-align: center;
+}
+#learn h2.course-title{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+#learn h2.course-title-all{
+    color: #fff
+}
+
+#learn h2.product-name{
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+#learn span.course-name{
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 220px;
+}
+
+#learn img.rating{
+    margin-top: 2px;
+    margin-bottom: 10px;
+    margin-right: 200px;
+}
+
+#learn span.course-name-all{
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 220px;
+}
+
+#learn div{
+
+}
+
+#learn span.price{
+    display : block;
+    font-size: 28px;
+}
+
+#learn a.add-to-bag{
+    display: block;
+    color: #8f746c;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-decoration: none;
+    padding: 10px 0;
+    border: 2px solid #bf746c;
+    width: 210px;
+    margin:20px auto;
+}
+
+#learn a.add-to-bag:hover{
+    color:#fff;
+    background: #8f746c;
+}
+
+#footer-banner img{
+    width: 100%;
+}
+
+#fa-questions{
+    text-align: center;
+    padding: 15px;
+    display: block;
+    margin: 20px auto;
+}
+#fa-question li a.faqclass{
+    text-decoration: none;
+    color: #fff;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+#faq-main{
+    background: #384868;
+}
+
+#faq-ul{
+    display: inline-block;
+}
+
+
+
+
+
+
+
+* {
+  box-sizing: border-box
+}
+
+html, body {
+  height: 100%
+}
+/*body {
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  //This justify-content is essentially unnecessary in Firefox and Chrome due to the flex: 1 1 auto on the main.  However, it's needed to push the footer down on IE11
+  justify-content: space-between
+}
+*/
+
+ul {
+  list-style: none
+}
+
+/*.generic-anchor {
+	color: $primary-light-blue;
+	&:visited {
+		color: $primary-light-blue
+	}
+	&:hover {
+		color: $primary-line-color
+	}
+} */
+.flex-rw {
+  display: flex;
+  flex-flow: row wrap;
+}
+//This main is mostly to push the footer to the bottom and for demo purposes.
+main {
+  flex: 1 1 auto; //For IE11
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 10em "Oswald", sans-serif;
+  color: #444;
+  line-height: 1
+}
+footer {
+
+    font: 11px "Open Sans", sans-serif;
+    background: #444;
+    margin-top: auto;
+    width: 100%
+}
+.footer-list-top {
+  width: 33.333%
+}
+.footer-list-top > li {
+  text-align: center;
+  padding-bottom: 10px
+}
+.footer-list-header {
+  padding: 10px 0 5px 0;
+  color: #fff;
+  font: 2.3vw "Oswald", sans-serif
+}
+.footer-list-anchor {
+  font: 1.3em "Open Sans", sans-serif
+}
+.footer-social-section {
+    color: #fff;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  margin-top: 5px;
+}
+.footer-social-section::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 10px;
+  border-top: 1px solid $primary-line-color;
+  width: calc(100% - 20px)
+}
+
+.footer-social-overlap {
+  position: relative;
+  z-index: 2;
+  background: #444;
+  padding: 0 20px
+}
+.footer-social-connect {
+   color: #fff;
+  display: flex;
+  align-items: center;
+  font: 3.5em "Oswald", sans-serif;
+  color: #fff;
+}
+.footer-social-small {
+  color: #fff;
+  font-size: 0.6em;
+  padding: 0px 20px
+}
+.footer-social-overlap > a {
+  font-size: 3em
+}
+.footer-social-overlap > a:not(:first-child) {
+  margin-left: 0.38em
+}
+.footer-bottom-section {
+  width: 100%;
+  padding: 10px;
+  border-top: 1px solid $primary-line-color;
+  margin-top: 10px
+}
+.footer-bottom-section > div:first-child {
+  margin-right: auto
+}
+.footer-bottom-wrapper {
+  font-size: 1.5em;
+  color: #fff
+}
+.footer-address {
+  display: inline;
+  font-style: normal
+}
+@media only screen and (max-width: 768px) {
+  .footer-list-header {
+    font-size: 2em
+  }
+  .footer-list-anchor {
+    font-size: 1.1em
+  }
+  .footer-social-connect {
+    font-size: 2.5em
+  }
+  .footer-social-overlap > a {
+    font-size: 2.24em
+  }
+  .footer-bottom-wrapper {
+    font-size: 1.3em
+  }
+}
+@media only screen and (max-width: 568px) {
+  main {
+    font-size: 8em
+  }
+  .footer-list-top {
+    width: 100%
+  }
+  .footer-list-header {
+    font-size: 3em;
+  }
+  .footer-list-anchor {
+    font-size: 1.5em
+  }
+  .footer-social-section {
+    justify-content: center
+  }
+  .footer-social-section::after {
+    top: 25%
+  }
+  .footer-social-connect {
+    margin-bottom: 10px;
+    padding: 0 10px
+  }
+  .footer-social-overlap {
+    display: flex;
+    justify-content: center;
+  }
+  .footer-social-icons-wrapper {
+    width: 100%;
+    padding: 0
+  }
+  .footer-social-overlap > a:not(:first-child) {
+    margin-left: 20px;
+  }
+  .footer-bottom-section {
+    padding: 0 5px 10px 5px
+  }
+  .footer-bottom-wrapper {
+    text-align: center;
+    width: 100%;
+    margin-top: 10px
+  }
+}
+@media only screen and (max-width: 480px) {
+  .footer-social-overlap > a {
+    margin: auto
+  }
+  .footer-social-overlap > a:not(:first-child) {
+    margin-left: 0;
+  }
+  .footer-bottom-rights {
+    display: block
+  }
+}
+@media only screen and (max-width: 320px) {
+  .footer-list-header {
+    font-size: 2.2em
+  }
+  .footer-list-anchor {
+    font-size: 1.2em
+  }
+  .footer-social-connect {
+    font-size: 2.4em
+  }
+  .footer-social-overlap > a {
+    font-size: 2.24em
+  }
+  .footer-bottom-wrapper {
+
+    background: #fff;
+    font-size: 1.3em
+  }
+}
+
+
+
+
+
+
+
+
+/*
+
+
+body.more {
+    background:#bf5c71 ;
+
+}
+
+.clearfix:after {
+    display:block;
+    clear:both;
+}
+
+
+.menu-wrap {
+    width:100%;
+    box-shadow:0px 1px 3px rgba(0,0,0,0.2);
+    background:#3e3436;
+}
+
+.menu {
+    width:1000px;
+    margin:0px 10px;
+}
+
+.menu li {
+    text-align: right;
+    margin:0px;
+    font-family:'Ek Mukta';
+}
+
+.menu a {
+    transition:all linear 0.15s;
+    color:#919191;
+}
+
+
+.menu li:hover > a, .menu .current-item > a {
+    text-decoration:none;
+    color:#be5b70;
+}
+
+
+.menu .arrow {
+    font-size:11px;
+    line-height:0%;
+}
+
+
+.menu > ul > li {
+    float:left;
+    display:inline-block;
+    text-align: right;
+    font-size:19px;
+    margin-right: 0px;
+}
+
+.menu > ul > li > a {
+    text-align: right;
+    padding:10px 20px;
+    display:inline-block;
+    text-shadow:0px 1px 0px rgba(0,0,0,0.4);
+}
+
+.menu > ul > li:hover > a, .menu > ul > .current-item > a {
+    background:#2e2728;
+}
+
+
+.menu li:hover .sub-menu {
+    z-index:1;
+    opacity:1;
+}
+
+
+.sub-menu {
+    width:160%;
+    padding:5px 0px;
+    position:absolute;
+    top:100%;
+    left:0px;
+    z-index:-1;
+    opacity:0;
+    transition:opacity linear 0.15s;
+    box-shadow:0px 2px 3px rgba(0,0,0,0.2);
+    background:#2e2728;
+}
+
+.sub-menu li {
+    display:block;
+    font-size:16px;
+}
+
+.sub-menu li a {
+    padding:10px 30px;
+    display:block;
+}
+
+.sub-menu li a:hover, .sub-menu .current-item a {
+    background:#3e3436;
+}
+*/
